@@ -8,6 +8,7 @@ interface Project {
   tags: string[];
   techStack: string[];
   color: string;
+  github?: string;
 }
 
 const projects: Project[] = [
@@ -38,6 +39,7 @@ const projects: Project[] = [
     tags: ['ML', 'Healthcare', 'Classification'],
     techStack: ['TensorFlow', 'Python', 'Flask', 'CNN'],
     color: 'from-pink-500/20 to-rose-500/20',
+    github: 'https://github.com/raveena3121/Skin-Disorder-Classification',
   },
   {
     title: 'Business Case PRCL-0015',
@@ -45,6 +47,7 @@ const projects: Project[] = [
     tags: ['Business Analytics', 'Dashboard', 'Insights'],
     techStack: ['Power BI', 'SQL', 'Excel', 'Python'],
     color: 'from-amber-500/20 to-orange-500/20',
+    github: 'https://github.com/raveena3121/Business-Case-for-prcl-0015-',
   },
 ];
 
@@ -120,17 +123,37 @@ const Projects = () => {
 
                   {/* Actions */}
                   <div className="flex items-center gap-3">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex-1 rounded-lg group/btn"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
+                    {project.github ? (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1"
+                      >
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full rounded-lg group/btn"
+                        >
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 rounded-lg group/btn opacity-50 cursor-not-allowed"
+                        disabled
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </Button>
+                    )}
                     <Button
                       size="sm"
                       className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg group/btn"
+                      disabled={!project.github}
                     >
                       View
                       <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
