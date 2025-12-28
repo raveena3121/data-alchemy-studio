@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -124,61 +124,11 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  {/* Actions */}
-                  <div className="flex items-center gap-3">
-                    {project.github ? (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1"
-                      >
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="w-full rounded-lg group/btn"
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </Button>
-                      </a>
-                    ) : (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1 rounded-lg group/btn opacity-50 cursor-not-allowed"
-                        disabled
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </Button>
-                    )}
-                    <Button
-                      size="sm"
-                      className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg group/btn"
-                      disabled={!project.github}
-                    >
-                      View
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* View All CTA */}
-          <div className="text-center mt-12">
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-xl px-8"
-            >
-              <Github className="w-5 h-5 mr-2" />
-              View All on GitHub
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </Button>
-          </div>
         </div>
       </div>
     </section>
