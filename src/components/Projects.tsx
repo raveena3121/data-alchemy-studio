@@ -18,6 +18,7 @@ const projects: Project[] = [
     tags: ['Deep Learning', 'CNN', 'Image Classification'],
     techStack: ['TensorFlow', 'Keras', 'Python', 'OpenCV'],
     color: 'from-green-500/20 to-emerald-500/20',
+    github: 'https://github.com/raveena3121/Rice-leaf-diseases-detection',
   },
   {
     title: 'Concrete Compressive Strength',
@@ -25,6 +26,7 @@ const projects: Project[] = [
     tags: ['Regression', 'Feature Engineering', 'Prediction'],
     techStack: ['Scikit-learn', 'XGBoost', 'Pandas', 'NumPy'],
     color: 'from-slate-500/20 to-zinc-500/20',
+    github: 'https://github.com/raveena3121/Concrete-Compressive-Strength',
   },
   {
     title: 'FIFA 20 Player Analysis',
@@ -32,6 +34,7 @@ const projects: Project[] = [
     tags: ['EDA', 'Visualization', 'Sports Analytics'],
     techStack: ['Python', 'Pandas', 'Matplotlib', 'Seaborn'],
     color: 'from-blue-500/20 to-indigo-500/20',
+    github: 'https://github.com/raveena3121/Fifa-20-Player-Analysis',
   },
   {
     title: 'Skin Disorder Classification',
