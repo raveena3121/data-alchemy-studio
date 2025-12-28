@@ -89,7 +89,7 @@ const Hero = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/raveena-3121dr/project1.git"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-xl bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
